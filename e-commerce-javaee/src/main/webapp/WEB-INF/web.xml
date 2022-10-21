@@ -55,4 +55,24 @@
     <servlet-name>ServletAdminArticle</servlet-name>
     <url-pattern>/admin/articles</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServletAdminArticleImage</display-name>
+    <servlet-name>ServletAdminArticleImage</servlet-name>
+    <servlet-class>com.el.servlet.admin.ServletAdminArticleImage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletAdminArticleImage</servlet-name>
+    <url-pattern>/admin/articles/images?idArticle={id}</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServletConnexion</display-name>
+    <servlet-name>ServletConnexion</servlet-name>
+    <servlet-class>com.el.servlet.connexion.ServletConnexion</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletConnexion</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
 </web-app>

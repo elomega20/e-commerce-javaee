@@ -63,7 +63,6 @@
 							</div>
 						</div>
 
-
 						<div class="col-10 col-md-6 col-lg-8 order-1 order-md-3">
 							<div class="xp-profilebar text-right">
 								<nav class="navbar p-0">
@@ -120,7 +119,8 @@
 
 
 			<!------main-content-start----------->
-
+    
+            
 			<div class="main-content">
 				<div class="row">
 					<div class="col-md-12">
@@ -130,16 +130,13 @@
 								<div class="row">
 									<div
 										class="col-sm-6 p-0 flex justify-content-lg-start justify-content-center">
-										<h2 class="ml-lg-2">Articles</h2>
+										<h2 class="ml-lg-2">Articles/Images</h2>
 									</div>
 									<div
 										class="col-sm-6 p-0 flex justify-content-lg-end justify-content-center">
 										<a href="#addEmployeeModal" class="btn btn-success"
 											data-toggle="modal"> <i class="material-icons">&#xE147;</i>
-											<span>Ajouter Nouveau Article</span>
-										</a> <a href="#deleteEmployeeModal" class="btn btn-danger"
-											data-toggle="modal"> <i class="material-icons">&#xE15C;</i>
-											<span>Supprimer</span>
+											<span>Ajouter Nouveau Image</span>
 										</a>
 									</div>
 								</div>
@@ -148,11 +145,8 @@
 								<thead>
 									<tr>
 										<th>Id</th>
-										<th>Designation</th>
-										<th>Detail</th>
-										<th>Prix Unitaire</th>
-										<th>Stock</th>
-										<th>Categorie</th>
+										<th>nom</th>
+										<th>Article</th>
 										<th>Action</th>
 									</tr>
 								</thead>
@@ -164,41 +158,38 @@
 										</c:set>
 										<c:forEach var="article" items="${ articles }">
 											<tr>
-												<th>${ article.identifiant }</th>
-												<th>${ article.designation }</th>
-												<th>${ article.detail }</th>
-												<th>${ article.prixUnitaire }</th>
-												<th>${ article.stock }</th>
-												<th>${ article.identifiantCategorie }</th>
+												<th>idImage</th>
+												<th>nomImage</th>
+												<th>idArticle</th>
 												<th>
-												    <a href="#editEmployeeModal${article.identifiant}" class="edit"
+												    <a href="#editEmployeeModal${image.identifiant}" class="edit"
 													data-toggle="modal"> <i class="material-icons"
 														data-toggle="tooltip" title="Edit">&#xE254;</i>
 												    </a> 
-												    <a href="#deleteEmployeeModal${article.identifiant}" class="delete"
+												    <a href="#deleteEmployeeModal${image.identifiant}" class="delete"
 													data-toggle="modal"> <i class="material-icons"
 														data-toggle="tooltip" title="Delete">&#xE872;</i>
 												    </a>
 												    <!----delete-modal start--------->
-                                                    <div class="modal fade" tabindex="-1" id="deleteEmployeeModal${article.identifiant}"
+                                                    <div class="modal fade" tabindex="-1" id="deleteEmployeeModal${image.identifiant}"
 														role="dialog">
 														<div class="modal-dialog" role="document">
 															<form method="post"   action="<c:url value="/admin/articles"/>">
 																<div class="modal-content">
 																	<div class="modal-header">
-																		<h5 class="modal-title">Supprimer Un Article</h5>
+																		<h5 class="modal-title">Supprimer Une Image</h5>
 																		<button type="button" class="close" data-dismiss="modal"
 																			aria-label="Close">
 																			<span aria-hidden="true">&times;</span>
 																		</button>
 																	</div>
 																	<div class="modal-body">
-																		<p>Etez-vous sur de vouloir supprimer cette article(s)?</p>
+																		<p>Etez-vous sur de vouloir supprimer cette image?</p>
 																		<p class="text-warning">
 																			<small>Cette action ne peut pas être annulée</small>
 																		</p>
 																	</div>
-																	<input type="hidden" name="idArticleDelete" value="${article.identifiant}"/>
+																	<input type="hidden" name="idArticleDelete" value="${image.identifiant}"/>
 																	<input type="hidden" name="operation" value="delete"/> 
 																	<div class="modal-footer">
 																		<button type="button" class="btn btn-secondary"
@@ -212,13 +203,13 @@
                                                      <!----delete-modal end--------->
                                                      
                                                      <!----edit-modal start--------->
-													 <div class="modal fade" tabindex="-1" id="editEmployeeModal${article.identifiant}"
+													 <div class="modal fade" tabindex="-1" id="editEmployeeModal${image.identifiant}"
 														role="dialog">
 														<div class="modal-dialog" role="document">
 															<form method="post"   action="<c:url value="/admin/articles"/>">
 																<div class="modal-content">
 																	<div class="modal-header">
-																		<h5 class="modal-title">Editer un article</h5>
+																		<h5 class="modal-title">Editer Une Image</h5>
 																		<button type="button" class="close" data-dismiss="modal"
 																			aria-label="Close">
 																			<span aria-hidden="true">&times;</span>
@@ -226,15 +217,11 @@
 																	</div>
 																	<div class="modal-body">
 																		<div class="form-group">
-																			<label>Prix Unitaire</label> 
-																			<input type="number" class="form-control" name="prixUnitaire">
-																		</div>
-																		<div class="form-group">
-																			<label>Stock</label> 
-																			<input type="number" class="form-control" name="stock" >
+																			<label>nom</label> 
+																			<input type="text" class="form-control" name="nomImage">
 																		</div>
 																	</div>
-																	<input type="hidden" name="idArticlePut" value="${article.identifiant}"/>
+																	<input type="hidden" name="idArticlePut" value="${image.identifiant}"/>
 																	<input type="hidden" name="operation" value="put"/> 
 																	<div class="modal-footer">
 																		<button type="button" class="btn btn-secondary"
@@ -248,6 +235,7 @@
 													<!----edit-modal end--------->
 												</th>
 											</tr>
+
 										</c:forEach>
 									</c:forEach>
 								</tbody>
@@ -277,37 +265,17 @@
 						<div class="modal-dialog" role="document">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h5 class="modal-title">Ajouter Article</h5>
+									<h5 class="modal-title">Ajouter Image</h5>
 									<button type="button" class="close" data-dismiss="modal"
 										aria-label="Close">
 										<span aria-hidden="true">&times;</span>
 									</button>
 								</div>
-								<form method="post"   action="<c:url value="/admin/articles"/>">
+								<form method="post"   action="<c:url value="/admin/articles/{${image.identifiantArticle}}/images"/>">
 								    <div class="modal-body">
 										<div class="form-group">
-											<label>Designation</label> 
-											<input name="designation" type="text" class="form-control" required>
-										</div>
-										<div class="form-group">
-											<label>Detail</label> 
-											<textarea name="detail" class="form-control" required></textarea>
-										</div>
-										<div class="form-group">
-											<label>Prix Unitaire</label>
-											<input name="prixUnitaire" type="number" class="form-control" required>
-										</div>
-										<div class="form-group">
-											<label>Stock</label> 
-											<input name="stock" type="number" class="form-control" required>
-										</div>
-										<div class="form-group">
-											<label>Categorie</label> 
-											<select name="select-categorie">
-											    <c:forEach var="categorie" items="${ categories }">
-											        <option value="${categorie.identifiant}"> ${ categorie.nom } </option>
-											    </c:forEach>
-											</select>
+											<label>Image</label> 
+											<input name="image" type="file" class="form-control" required>
 										</div>
 										<input type="hidden" name="operation" value="post"/>
 									</div>
@@ -324,7 +292,10 @@
 					
 				</div>
 			</div>
-
+    
+    
+    
+    
 			<!----footer-design------------->
 
 			<footer class="footer">
@@ -334,7 +305,6 @@
 					</div>
 				</div>
 			</footer>
-
 		</div>
 
 		<!------main-content-end----------->
@@ -351,6 +321,7 @@
 	<script src="<c:url value="/js/bootstrap.min.js"/>"></script>
 	<script src="<c:url value="/js/jquery-3.3.1.min.js"/>"></script>
 	<script src="<c:url value="/js/custom.js"/>"></script>
+
 
 
 </body>
