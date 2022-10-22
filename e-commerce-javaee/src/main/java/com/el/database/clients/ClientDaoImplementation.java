@@ -270,7 +270,7 @@ public class ClientDaoImplementation implements ClientDao {
 
 	// permette d'obtenir le profile d'un client
 	@Override
-	public Client profileClient(int idClient) throws DaoException {
+	public Client profileClient(String email) throws DaoException {
 		Client client = new Client();
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -278,9 +278,9 @@ public class ClientDaoImplementation implements ClientDao {
 
 		try {
 			connection = daoFactory.getConnection();
-			String requeteSql = "SELECT * FROM clients WHERE idClient=?";
+			String requeteSql = "SELECT * FROM clients WHERE email=?";
 			preparedStatement = connection.prepareStatement(requeteSql);
-			preparedStatement.setInt(1, idClient);
+			preparedStatement.setString(1, email);
 			resultSet = preparedStatement.executeQuery();
 			connection.commit();// validation de la transaction
 			if (resultSet.next()) {

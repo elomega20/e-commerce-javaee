@@ -14,7 +14,7 @@ class ProfileClientTest {
 		 try {
         	 DaoFactory daoFactory = DaoFactory.getInstance();
              ClientDao clientDao = daoFactory.getClientDao();
-             Client client = clientDao.profileClient(1);
+             Client client = clientDao.profileClient("elseydi10@gmail.com");
         	 System.out.println("Nom: "+client.getNom());
         	 System.out.println("prenom: "+client.getPrenom());
         	 System.out.println("email: "+client.getEmail());
