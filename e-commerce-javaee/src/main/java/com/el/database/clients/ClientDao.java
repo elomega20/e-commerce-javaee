@@ -18,4 +18,6 @@ public interface ClientDao {
     public boolean reinitialiserMotDePass(Client client) throws DaoException;
     public boolean modifierMotDePass(Client client,String nouveauMotdePass) throws DaoException;
     public Client profileClient(int idClient) throws DaoException;
+    public boolean verifierEmail(String email) throws DaoException;
+    public boolean verifierMotDePass(String motDePass) throws DaoException;
 }
