@@ -270,7 +270,7 @@ public class ClientDaoImplementation implements ClientDao {
 
 	// permette d'obtenir le profile d'un client
 	@Override
-	public Client profileClient(int idClient) throws DaoException {
+	public Client profileClient(String email) throws DaoException {
 		Client client = new Client();
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -278,9 +278,9 @@ public class ClientDaoImplementation implements ClientDao {
 
 		try {
 			connection = daoFactory.getConnection();
-			String requeteSql = "SELECT * FROM clients WHERE idClient=?";
+			String requeteSql = "SELECT * FROM clients WHERE email=?";
 			preparedStatement = connection.prepareStatement(requeteSql);
-			preparedStatement.setInt(1, idClient);
+			preparedStatement.setString(1, email);
 			resultSet = preparedStatement.executeQuery();
 			connection.commit();// validation de la transaction
 			if (resultSet.next()) {
@@ -323,4 +323,109 @@ public class ClientDaoImplementation implements ClientDao {
 
 		return client;
 	}
+
+	// pour verifier si l'email est dans la base
+	@Override
+	public boolean verifierEmail(String email) throws DaoException {
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		ResultSet resultSet = null;
+		boolean verifierEmail = false;
+
+		try {
+			connection = daoFactory.getConnection();
+			String requeteSql = "SELECT email FROM clients WHERE email=?";
+			preparedStatement = connection.prepareStatement(requeteSql);
+			preparedStatement.setString(1, email);
+			resultSet = preparedStatement.executeQuery();
+			connection.commit();// validation de la transaction
+			if (resultSet.next()) {
+				verifierEmail = true;
+			}
+		} catch (SQLException e) {
+			try {
+				if (connection != null) {
+					connection.rollback(); // annulation de la transaction
+					if (resultSet != null) {
+						resultSet.close();
+					}
+					if (preparedStatement != null) {
+						preparedStatement.close();
+					}
+					connection.close();
+				}
+			} catch (SQLException e1) {
+			}
+			throw new DaoException("impossible de communiquer avec la base de données");
+		} finally {
+			try {
+				if (resultSet != null) {
+					resultSet.close();
+				}
+				if (preparedStatement != null) {
+					preparedStatement.close();
+				}
+				if (connection != null) {
+					connection.close();
+				}
+			} catch (SQLException e) {
+				throw new DaoException("impossible de communiquer avec la base de données");
+			}
+		}
+
+		return verifierEmail;
+	}
+
+	// pour verifier si le mot de passe est dans la base
+	@Override
+	public boolean verifierMotDePass(String motDePass) throws DaoException {
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		ResultSet resultSet = null;
+		boolean verifierMotDePass = false;
+
+		try {
+			connection = daoFactory.getConnection();
+			String requeteSql = "SELECT motDePass FROM clients WHERE motDePass=?";
+			preparedStatement = connection.prepareStatement(requeteSql);
+			preparedStatement.setString(1, motDePass);
+			resultSet = preparedStatement.executeQuery();
+			connection.commit();// validation de la transaction
+			if (resultSet.next()) {
+				verifierMotDePass = true;
+			}
+		} catch (SQLException e) {
+			try {
+				if (connection != null) {
+					connection.rollback(); // annulation de la transaction
+					if (resultSet != null) {
+						resultSet.close();
+					}
+					if (preparedStatement != null) {
+						preparedStatement.close();
+					}
+					connection.close();
+				}
+			} catch (SQLException e1) {
+			}
+			throw new DaoException("impossible de communiquer avec la base de données");
+		} finally {
+			try {
+				if (resultSet != null) {
+					resultSet.close();
+				}
+				if (preparedStatement != null) {
+					preparedStatement.close();
+				}
+				if (connection != null) {
+					connection.close();
+				}
+			} catch (SQLException e) {
+				throw new DaoException("impossible de communiquer avec la base de données");
+			}
+		}
+
+		return verifierMotDePass;
+	}
+	
 }

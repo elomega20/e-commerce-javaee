@@ -15,7 +15,7 @@
   <servlet-mapping>
     <servlet-name>ServletAjouterImage</servlet-name>
     <url-pattern>/vue-ajouter-image</url-pattern>
-  </servlet-mapping> 
+  </servlet-mapping>
   <display-name>e-commerce-javaee</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -44,5 +44,45 @@
   <servlet-mapping>
     <servlet-name>ServletAdmin</servlet-name>
     <url-pattern>/admin</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServletAdminArticle</display-name>
+    <servlet-name>ServletAdminArticle</servlet-name>
+    <servlet-class>com.el.servlet.admin.ServletAdminArticle</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletAdminArticle</servlet-name>
+    <url-pattern>/admin/articles</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServletAdminArticleImage</display-name>
+    <servlet-name>ServletAdminArticleImage</servlet-name>
+    <servlet-class>com.el.servlet.admin.ServletAdminArticleImage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletAdminArticleImage</servlet-name>
+    <url-pattern>/admin/articles/images?idArticle={id}</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServletConnexion</display-name>
+    <servlet-name>ServletConnexion</servlet-name>
+    <servlet-class>com.el.servlet.connexion.ServletConnexion</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletConnexion</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServletInscription</display-name>
+    <servlet-name>ServletInscription</servlet-name>
+    <servlet-class>com.el.servlet.connexion.ServletInscription</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletInscription</servlet-name>
+    <url-pattern>/inscription</url-pattern>
   </servlet-mapping>
 </web-app>

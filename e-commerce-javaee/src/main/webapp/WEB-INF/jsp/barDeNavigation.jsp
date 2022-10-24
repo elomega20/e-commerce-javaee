@@ -24,7 +24,14 @@
 					    </button>
 						<ul class="dropdown-menu">
 							<li><a class="dropdown-item" href="#">Mon profile</a></li>
-							<li><a class="dropdown-item" href="#">Se deconnecter</a></li>
+							<form method="post" action="<c:url value="/" />">
+								<input type="hidden" name="connexion" value="false"/>
+								<li>
+								    <a class="dropdown-item" href="#">
+								        <button type="submit" style="border:none; background-color: none;">Se deconnecter</button> 
+								    </a>
+							    </li>
+							</form>
 						</ul>
 					</div>
 					
