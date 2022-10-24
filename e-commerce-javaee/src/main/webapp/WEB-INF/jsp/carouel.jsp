@@ -2,37 +2,70 @@
 	<div class="col-md-2 col-lg-2 bordure-categorie">
 		<div class="row list-group" id="list-tab" role="tablist">
 			<div class="col-md-12 col-lg-12">
-			    <span><a class="list-group-item list-group-item-action" id="list-1" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile"><ion-icon name="phone-portrait-outline"></ion-icon> Téléphone</a></span> 
+				<span><a class="list-group-item list-group-item-action"
+					id="list-1" data-bs-toggle="list" href="#list-profile" role="tab"
+					aria-controls="list-profile"><ion-icon
+							name="phone-portrait-outline"></ion-icon> Téléphone</a></span>
 			</div>
 			<div class="col-md-12 col-lg-12">
-			    <a class="list-group-item list-group-item-action" id="list-2" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile"><ion-icon name="nutrition-outline"></ion-icon> Supermarché</a>
+				<a class="list-group-item list-group-item-action" id="list-2"
+					data-bs-toggle="list" href="#list-profile" role="tab"
+					aria-controls="list-profile"><ion-icon name="nutrition-outline"></ion-icon>
+					Supermarché</a>
 			</div>
 			<div class="col-md-12 col-lg-12">
-			    <a class="list-group-item list-group-item-action" id="list-3" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile"><ion-icon name="medkit-outline"></ion-icon> Santé & Beauté</a>
+				<a class="list-group-item list-group-item-action" id="list-3"
+					data-bs-toggle="list" href="#list-profile" role="tab"
+					aria-controls="list-profile"><ion-icon name="medkit-outline"></ion-icon>
+					Santé & Beauté</a>
 			</div>
 			<div class="col-md-12 col-lg-12">
-		 	    <a class="list-group-item list-group-item-action" id="list-4" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile"><ion-icon name="print-outline"></ion-icon> Electronique</a>
+				<a class="list-group-item list-group-item-action" id="list-4"
+					data-bs-toggle="list" href="#list-profile" role="tab"
+					aria-controls="list-profile"><ion-icon name="print-outline"></ion-icon>
+					Electronique</a>
 			</div>
 			<div class="col-md-12 col-lg-12">
-			    <a class="list-group-item list-group-item-action" id="list-5" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile"><ion-icon name="desktop-outline"></ion-icon> Informatique</a>
+				<a class="list-group-item list-group-item-action" id="list-5"
+					data-bs-toggle="list" href="#list-profile" role="tab"
+					aria-controls="list-profile"><ion-icon name="desktop-outline"></ion-icon>
+					Informatique</a>
 			</div>
 			<div class="col-md-12 col-lg-12">
-			    <a class="list-group-item list-group-item-action" id="list-6" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile"><ion-icon name="aperture-outline"></ion-icon> Electroménager</a>
+				<a class="list-group-item list-group-item-action" id="list-6"
+					data-bs-toggle="list" href="#list-profile" role="tab"
+					aria-controls="list-profile"><ion-icon name="aperture-outline"></ion-icon>
+					Electroménager</a>
 			</div>
 			<div class="col-md-12 col-lg-12">
-			    <a class="list-group-item list-group-item-action" id="list-7" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile"><ion-icon name="home-outline"></ion-icon> Maison & Bureau</a>
+				<a class="list-group-item list-group-item-action" id="list-7"
+					data-bs-toggle="list" href="#list-profile" role="tab"
+					aria-controls="list-profile"><ion-icon name="home-outline"></ion-icon>
+					Maison & Bureau</a>
 			</div>
 			<div class="col-md-12 col-lg-12">
-			     <a class="list-group-item list-group-item-action" id="list-8" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile"><ion-icon name="shirt-outline"></ion-icon> Mode</a>
+				<a class="list-group-item list-group-item-action" id="list-8"
+					data-bs-toggle="list" href="#list-profile" role="tab"
+					aria-controls="list-profile"><ion-icon name="shirt-outline"></ion-icon>
+					Mode</a>
 			</div>
 			<div class="col-md-12 col-lg-12">
-			    <a class="list-group-item list-group-item-action" id="list-9" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile"><ion-icon name="happy-outline"></ion-icon> Produit pour bébés</a>
+				<a class="list-group-item list-group-item-action" id="list-9"
+					data-bs-toggle="list" href="#list-profile" role="tab"
+					aria-controls="list-profile"><ion-icon name="happy-outline"></ion-icon>
+					Produit pour bébés</a>
 			</div>
 			<div class="col-md-12 col-lg-12">
-			    <a class="list-group-item list-group-item-action" id="list-10" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile"><ion-icon name="barbell-outline"></ion-icon> Articles de sport</a>
+				<a class="list-group-item list-group-item-action" id="list-10"
+					data-bs-toggle="list" href="#list-profile" role="tab"
+					aria-controls="list-profile"><ion-icon name="barbell-outline"></ion-icon>
+					Articles de sport</a>
 			</div>
 			<div class="col-md-12 col-lg-12">
-			    <a class="list-group-item list-group-item-action" id="list-11" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile"><ion-icon name="game-controller-outline"></ion-icon> Jeux vidéos</a>
+				<a class="list-group-item list-group-item-action" id="list-11"
+					data-bs-toggle="list" href="#list-profile" role="tab"
+					aria-controls="list-profile"><ion-icon
+						name="game-controller-outline"></ion-icon> Jeux vidéos</a>
 			</div>
 		</div>
 	</div>
@@ -48,11 +81,19 @@
 					data-bs-slide-to="1" aria-label="Slide 2"></button>
 				<button type="button" data-bs-target="#carouselExampleCaptions"
 					data-bs-slide-to="2" aria-label="Slide 3"></button>
+				<button type="button" data-bs-target="#carouselExampleCaptions"
+					data-bs-slide-to="3" aria-label="Slide 4"></button>
+				<button type="button" data-bs-target="#carouselExampleCaptions"
+					data-bs-slide-to="4" aria-label="Slide 5"></button>
+				<button type="button" data-bs-target="#carouselExampleCaptions"
+					data-bs-slide-to="5" aria-label="Slide 6"></button>
+				<button type="button" data-bs-target="#carouselExampleCaptions"
+					data-bs-slide-to="6" aria-label="Slide 7"></button>
 			</div>
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<img src="<c:url value="/STOCKAGE/images/slider-3.jpg"/>"
-						class="d-block w-100" alt="...">
+					<img src="<c:url value="/STOCKAGE/images/slider-1.gif"/>"
+						class="d-block w-100" alt="slider-1">
 					<div class="carousel-caption d-none d-md-block">
 						<h5>First slide label</h5>
 						<p>Some representative placeholder content for the first
@@ -60,8 +101,8 @@
 					</div>
 				</div>
 				<div class="carousel-item">
-					<img src="<c:url value="/STOCKAGE/images/2j.jpg"/>"
-						class="d-block w-100" alt="...">
+					<img src="<c:url value="/STOCKAGE/images/slider-2.jpg"/>"
+						class="d-block w-100" alt="slider-2">
 					<div class="carousel-caption d-none d-md-block">
 						<h5>Second slide label</h5>
 						<p>Some representative placeholder content for the second
@@ -69,8 +110,44 @@
 					</div>
 				</div>
 				<div class="carousel-item">
-					<img src="<c:url value="/STOCKAGE/images/3j.gif"/>"
-						class="d-block w-100" alt="...">
+					<img src="<c:url value="/STOCKAGE/images/slider-3-1.jpg"/>"
+						class="d-block w-100" alt="slider-3">
+					<div class="carousel-caption d-none d-md-block">
+						<h5>Third slide label</h5>
+						<p>Some representative placeholder content for the third
+							slide.</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="<c:url value="/STOCKAGE/images/slider-4.jpg"/>"
+						class="d-block w-100" alt="slider-4">
+					<div class="carousel-caption d-none d-md-block">
+						<h5>Third slide label</h5>
+						<p>Some representative placeholder content for the third
+							slide.</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="<c:url value="/STOCKAGE/images/slider-5.jpeg"/>"
+						class="d-block w-100" alt="slider-5">
+					<div class="carousel-caption d-none d-md-block">
+						<h5>Third slide label</h5>
+						<p>Some representative placeholder content for the third
+							slide.</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="<c:url value="/STOCKAGE/images/slider-6.jpg"/>"
+						class="d-block w-100" alt="slider-6">
+					<div class="carousel-caption d-none d-md-block">
+						<h5>Third slide label</h5>
+						<p>Some representative placeholder content for the third
+							slide.</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="<c:url value="/STOCKAGE/images/slider-7.jpg"/>"
+						class="d-block w-100" alt="slider-7">
 					<div class="carousel-caption d-none d-md-block">
 						<h5>Third slide label</h5>
 						<p>Some representative placeholder content for the third
@@ -90,5 +167,4 @@
 			</button>
 		</div>
 	</div>
-
 </div>
